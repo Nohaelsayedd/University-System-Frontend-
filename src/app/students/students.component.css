@@ -1,0 +1,12 @@
+.students-page {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
