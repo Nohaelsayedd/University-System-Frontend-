@@ -1,6 +1,5 @@
 <header class="app-header">
   <h1>Ain Shams University</h1>
-  <a routerLink="/students">Students</a>
-  <br>
-  <a routerLink="/">Home</a>
+  <a routerLink="/" *ngIf="!isHomePage">Home</a>
+  <a routerLink="/students" *ngIf="isHomePage">Students</a>
 </header>
