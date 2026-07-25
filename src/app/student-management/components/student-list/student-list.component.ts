@@ -21,6 +21,12 @@ export class StudentListComponent implements OnInit {
   ngOnInit(): void {
     this.studentService.getAll().subscribe((students: Student[]) => {
       this.students = students;
-    }); 
-}
+    }); }
+
+  onDeleteStudent(id: number): void {
+      this.studentService.delete(id).subscribe(() => {
+        this.students = this.students.filter(student => student.id !== id);
+      });}
+    
+
 }
