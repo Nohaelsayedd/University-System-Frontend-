@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { StudentListComponent } from './student-list/student-list.component';
 
 @NgModule({
