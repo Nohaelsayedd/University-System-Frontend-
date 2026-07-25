@@ -9,6 +9,7 @@ import { StudentService } from '../../services/student.service';
 export class StudentListComponent implements OnInit {
 
   studentName: string = '';
+
   students: Student[] = [];
 
   get filteredStudents() {
@@ -27,6 +28,5 @@ export class StudentListComponent implements OnInit {
       this.studentService.delete(id).subscribe(() => {
         this.students = this.students.filter(student => student.id !== id);
       });}
-    
 
 }

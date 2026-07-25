@@ -1,0 +1,42 @@
+:host { /* This selector targets the host element of the component <app-add-student> */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.back-link {
+  position: absolute;
+  top: 0;
+  right: 16px;
+}
+
+.back-link button {
+  background-color: #CBE7F0;
+  color: #333;
+  border: 1px solid black;
+}
+
+.add-student {
+  background-color: #CBE7F0;
+  border: 1px solid black;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-student input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #999;
+}
+
+button {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}

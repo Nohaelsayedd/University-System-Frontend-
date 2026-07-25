@@ -10,6 +10,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { StudentListComponent } from './student-management/components/student-list/student-list.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddStudentComponent } from './student-management/components/add-student/add-student.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     StudentListComponent,
     HomeComponent,
+    AddStudentComponent,
   ],
   imports: [
     BrowserModule,

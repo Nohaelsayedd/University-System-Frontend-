@@ -1,0 +1,12 @@
+<div class="back-link">
+  <button routerLink="/students">Back to Students</button>
+</div>
+<div class="add-student">
+  <h3>Add Student</h3>
+  <input [(ngModel)]="newStudent.firstName" placeholder="First name">
+  <input [(ngModel)]="newStudent.lastName" placeholder="Last name">
+  <input [(ngModel)]="newStudent.email" placeholder="Email">
+  <input [(ngModel)]="newStudent.lvl" placeholder="Level (1-5)">
+  <input [(ngModel)]="newStudent.facultyId" type="number" placeholder="Faculty ID">
+  <button (click)="onAddStudent()">Add</button>
+</div>
