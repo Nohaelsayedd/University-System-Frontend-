@@ -1,0 +1,9 @@
+<div class="search">
+    <input [(ngModel)]="studentName" placeholder="Search....">
+</div>
+
+<div class="cards-container">
+  <app-student-card *ngFor="let s of filteredStudents" [id]="s.id" [name]="s.name" [lvl]="s.lvl"></app-student-card>
+</div>
+
+<p *ngIf="filteredStudents.length === 0">No students found</p>
