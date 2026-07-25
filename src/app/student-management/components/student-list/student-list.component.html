@@ -3,7 +3,7 @@
 </div>
 
 <div class="cards-container">
-  <app-student-card *ngFor="let s of filteredStudents" [id]="s.id" [name]="s.name" [lvl]="s.lvl"></app-student-card>
+  <app-student-card *ngFor="let s of filteredStudents" [id]="s.id" [name]="s.firstName + ' ' + s.lastName" [lvl]="s.lvl"></app-student-card>
 </div>
 
 <p *ngIf="filteredStudents.length === 0">No students found</p>

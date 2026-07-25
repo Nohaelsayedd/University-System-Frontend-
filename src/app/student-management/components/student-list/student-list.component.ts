@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Student } from '../../models/student.model';
+import { StudentService } from '../../services/student.service';
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
@@ -8,19 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class StudentListComponent implements OnInit {
 
   studentName: string = '';
-  students = [
-    { id: '123456', name: 'noha', lvl: '3' },
-    { id: '789012', name: 'ahmed', lvl: '2' },
-    { id: '345678', name: 'mohamed', lvl: '4' }
-  ];
+  students: Student[] = [];
 
   get filteredStudents() {
-    return this.students.filter(student => student.name.toLowerCase().includes(this.studentName.toLowerCase()));
-  }
+    return this.students.filter(student =>
+      (student.firstName + ' ' + student.lastName).toLowerCase().includes(this.studentName.toLowerCase())
+    );}
 
-  constructor() { }
+  constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
-  }
-
+    this.studentService.getAll().subscribe((students: Student[]) => {
+      this.students = students;
+    }); 
+}
 }
