@@ -3,5 +3,6 @@
 <h1>Name: {{ name }}</h1>
 <h2>ID: {{ id }}</h2>
 <h3>Study level: {{ lvl }}</h3>
+<button [routerLink]="['/students/edit', id]">Edit</button>
 <button (click)="onDeleteClick()">Delete</button>
 </div>
