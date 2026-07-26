@@ -4,5 +4,6 @@
 <h2>ID: {{ id }}</h2>
 <h3>Study level: {{ lvl }}</h3>
 <button [routerLink]="['/students/edit', id]">Edit</button>
+<button [routerLink]="['/students/edit/reactive', id]">Edit (Reactive)</button>
 <button (click)="onDeleteClick()">Delete</button>
 </div>
