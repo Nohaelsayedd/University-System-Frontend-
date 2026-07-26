@@ -3,11 +3,11 @@ import { Student } from '../../models/student.model';
 import { StudentService } from '../../services/student.service';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-add-student',
-  templateUrl: './add-student.component.html',
-  styleUrls: ['./add-student.component.css']
+  selector: 'app-student-form',
+  templateUrl: './student-form.component.html',
+  styleUrls: ['./student-form.component.css']
 })
-export class AddStudentComponent implements OnInit {
+export class StudentFormComponent implements OnInit {
    newStudent: Omit<Student, 'id'> = {
     firstName: '',
     lastName: '',

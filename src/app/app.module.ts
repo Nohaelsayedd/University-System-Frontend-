@@ -10,7 +10,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { StudentListComponent } from './student-management/components/student-list/student-list.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AddStudentComponent } from './student-management/components/add-student/add-student.component';
+import { StudentFormComponent } from './student-management/components/student-form/student-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,7 @@ import { AddStudentComponent } from './student-management/components/add-student
     FooterComponent,
     StudentListComponent,
     HomeComponent,
-    AddStudentComponent,
+    StudentFormComponent,
   ],
   imports: [
     BrowserModule,

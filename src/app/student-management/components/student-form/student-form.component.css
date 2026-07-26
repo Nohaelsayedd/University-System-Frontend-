@@ -1,4 +1,4 @@
-:host { /* This selector targets the host element of the component <app-add-student> */
+:host { /* This selector targets the host element of the component <app-student-form> */
   position: relative;
   display: flex;
   justify-content: center;
