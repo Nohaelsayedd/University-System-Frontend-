@@ -3,10 +3,13 @@
 </div>
 <div class="add-student">
   <h3>{{ isEditMode ? 'Edit Student' : 'Add Student' }}</h3>
-  <input [(ngModel)]="newStudent.firstName" placeholder="First name">
-  <input [(ngModel)]="newStudent.lastName" placeholder="Last name">
-  <input [(ngModel)]="newStudent.email" placeholder="Email">
-  <input [(ngModel)]="newStudent.lvl" placeholder="Level (1-5)">
-  <input [(ngModel)]="newStudent.facultyId" type="number" placeholder="Faculty ID">
-  <button (click)="onSubmit()">{{ isEditMode ? 'Update' : 'Add' }}</button>
+  <form #studentForm="ngForm" (ngSubmit)="onSubmit()">
+    <input name="firstName" [(ngModel)]="newStudent.firstName" placeholder="First name">
+    <input name="lastName" [(ngModel)]="newStudent.lastName" placeholder="Last name">
+    <input name="email" [(ngModel)]="newStudent.email" placeholder="Email">
+    <input name="lvl" [(ngModel)]="newStudent.lvl" placeholder="Level (1-5)">
+    <input name="facultyId" [(ngModel)]="newStudent.facultyId" type="number" placeholder="Faculty ID">
+    <br>
+    <button type="submit">{{ isEditMode ? 'Update' : 'Add' }}</button>
+  </form>
 </div>
